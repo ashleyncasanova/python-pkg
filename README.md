@@ -1,5 +1,8 @@
 ## [Packaging a Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/#packaging-python-projects)
 
+<span style="color:hotpink">register at [pypi.org](https://pypi.org/) and set up two factor authentication.</span>
+
+><span style="color:hotpink">Note: </span>
 ### 1. Create a Basic Project Structure
 
 ```
@@ -58,15 +61,21 @@ classifiers = [
 "Homepage" = "https://github.com/pypa/sampleproject"
 "Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
 ```
-
+>Note: We omitted "License" and "Operating System" classifiers during initial setup.
 ### 5. Update `project.toml` with Hatchling Configuration
+
+Add the following code to the end of the `project.toml` file.
+
 ```
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
 
->Note: Add contents to end of file.
+><span style="color:hotpink">Note: [hatch](https://packaging.python.org/en/latest/key_projects/#hatch:~:text=hatch-,%C2%B6,-Docs%20%7C%20GitHub) is a “backend” tool to use to create distribution packages for your project.</span
+>
+
+></span style="color:hotpink">Note: A distribution package is a versioned archive file that contains Python packages, modules, and other resource files that are used to distribute a Release. The archive file is what an end-user will download from the internet and install.</span>
 
 
 ### 5. Create `README.md`
